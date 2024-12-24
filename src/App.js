@@ -12,8 +12,8 @@ function App() {
   const fetchJobs = useCallback(async () => {
     try {
       const url = searchLocation
-        ? `http://localhost:5000/api/jobs?location=${encodeURIComponent(searchLocation)}`
-        : 'http://localhost:5000/api/jobs';
+        ? `https://jobfinder-production-606a.up.railway.app/api/jobs?location=${encodeURIComponent(searchLocation)}`
+        : 'https://jobfinder-production-606a.up.railway.app/api/jobs';
       const response = await fetch(url);
       const data = await response.json();
       setJobs(data);
